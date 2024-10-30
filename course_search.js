@@ -37,31 +37,35 @@ let courses = [
   },
 ];
 
+// 1.
 
 courses.find((course) => {
   if (course.CourseId == "PROG200") {
-    console.log(course.StartDate);
-    return course.StartDate;
+    console.log(`${course.CourseId} starts on ${course.StartDate}`);
   }
 });
+
+// 2.
 
 courses.find((course) => {
   if (course.CourseId == "PROJ500") {
-    console.log(course.Title);
-    return course.Title;
+    console.log(`${course.Title} has ID of ${course.CourseId}`);
+    // return course.Title;
   }
 });
+
+// 3.
 
 courses.filter((course) => {
   if (course.Fee <= 50) {
-    // return  course.Title
-    console.log(course.Title);
+    console.log(`${course.Title} costs $${course.Fee}`);
   }
 });
+
+// 4.
 
 courses.filter((course) => {
   if (course.Location == "Classroom 1") {
-    console.log(course.Title);
+    console.log(`${course.Title} in ${course.Location}`);
   }
 });
-
